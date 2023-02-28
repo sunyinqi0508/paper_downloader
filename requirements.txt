@@ -1,0 +1,2 @@
+python-slugify
+crossref_commons
