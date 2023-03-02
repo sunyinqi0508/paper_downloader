@@ -64,10 +64,10 @@ def downloader(i : int):
             cnt += 1
         if (cnt % 20 == 0):
             print(f'Progress {100*cnt/total}%')
-    with concurrent.futures.ThreadPoolExecutor(max_workers=16) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
         executor.map(get_urls, urls)
 
-with concurrent.futures.ThreadPoolExecutor(max_workers=16) as executor:
+with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
     executor.map(downloader, range(16))
     
 print(f'Progress {100*cnt/total}%')

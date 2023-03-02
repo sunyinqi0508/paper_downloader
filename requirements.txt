@@ -1,2 +1,3 @@
 python-slugify
 crossref_commons
+python-magic-bin
